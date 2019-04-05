@@ -1,4 +1,4 @@
-package com.company;
+package Stack_structure;
 
 class Stack<T> {
 
