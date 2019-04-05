@@ -21,12 +21,16 @@ class Stack<T> {
         top = item; //top은 새로만들어진 node item이 들어감
     }
 
-    public void pop() { //삭제 (맨 뒤에 들어간 노드가 삭제 됨)
+    public T pop() { //삭제 (맨 뒤에 들어간 노드가 삭제 됨)
+        T item = null;
         if (top == null) { //삭제 할 top 노드가 없다면
             System.out.println("스택이 비어있습니다.");
-            return;
+
+        }else {
+            item = top.data; //return 할 맨위의 노드 값
+            top = top.next;
         }
-        top = top.next;
+        return item;
     }
 
     public void peek() { //맨위의 top, 맨 뒤에 들어간 노드 읽기
@@ -56,12 +60,12 @@ public class StackMain {
         item.push(3);
         item.push(4);
         item.peek(); // 4
-        item.pop(); //4 삭제
-        item.pop(); //3 삭제
+        System.out.println(item.pop()); //4 삭제
+        System.out.println(item.pop()); //3 삭제
         item.peek(); //2
         System.out.println(item.isEmpty()); //2, 1 있음 -> false
-        item.pop(); //2 삭제
-        item.pop(); //1 삭제
+        System.out.println(item.pop()); //2 삭제
+        System.out.println(item.pop()); //1 삭제
         System.out.println(item.isEmpty()); //true
     }
 
