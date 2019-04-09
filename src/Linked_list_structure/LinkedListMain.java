@@ -49,7 +49,7 @@ class LinkedList<T> {
 }
 
 
-public class LinkedListMain {
+public class   LinkedListMain {
     public static void main(String[] args) {
         LinkedList<Integer> item = new LinkedList<>();
         item.append(1);
