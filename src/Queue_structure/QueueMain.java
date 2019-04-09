@@ -1,7 +1,5 @@
 package Queue_structure;
 
-import java.sql.SQLOutput;
-
 class Queue<T> {
     class Node<T> {
         T data;
